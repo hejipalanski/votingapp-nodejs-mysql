@@ -1,0 +1,10 @@
+CREATE MYSQL SERVER
+PS C:\Users\toshiba>mysqld.exe --datadir=node-mysql-votingapp --initialize-insecure
+
+RUN SERVER
+PS C:\Users\toshiba>mysqld.exe --datadir=node-mysql-votingapp
+
+OPEN MYSQL CLIENT
+PS C:\Users\toshiba> mysql -u root
+mysql> create user 'votingappadmin'@'localhost' identified by 'votingappadminpassword';
+mysql> grant all on candidatesdb.* to 'votingappadmin'@'localhost';
