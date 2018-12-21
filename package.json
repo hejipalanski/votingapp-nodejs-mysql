@@ -1,0 +1,14 @@
+{
+	"name": "votingapp-mysql",
+	"version": "1.0.0",
+	"description": "restful api's",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "hejipalanski@yahoo.com",
+	"license": "MIT",
+	"dependencies": {
+		"mysql": "^2.16.0"
+	}
+}
