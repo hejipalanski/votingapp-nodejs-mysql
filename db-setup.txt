@@ -1,4 +1,6 @@
-CREATE MYSQL SERVER
+WINDOWS
+
+CREATE MYSQL DIR
 PS C:\Users\toshiba>mysqld.exe --datadir=node-mysql-votingapp --initialize-insecure
 
 RUN SERVER
@@ -8,3 +10,18 @@ OPEN MYSQL CLIENT
 PS C:\Users\toshiba> mysql -u root
 mysql> create user 'votingappadmin'@'localhost' identified by 'votingappadminpassword';
 mysql> grant all on candidatesdb.* to 'votingappadmin'@'localhost';
+
+LINUX
+RUN MYSQL SERVER
+
+$systemctl start mysql
+
+OPEN MYSQL CLIENT
+$mysql -u root -p<your password>
+
+CREATE DATABASE
+$mysql> CREATE DATABASE candidatesdb;
+
+RUN sql script to create the table;
+
+$mysql>source <path to>/votingapp-nodejs-mysql/db/sql/candidateTable.sql
